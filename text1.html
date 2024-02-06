@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+  html {
+    height: 100%;
+  }
+  header {
+   padding: 0px;
+  }
+  
+  body {
+    margin: 0px !important;
+    height: 100%;
+    background-color: rgb(226, 206, 199);
+    h1{
+      text-align: center;
+    }
+  }
+  h2{
+    margin-top: 0px !important;
+    text-align: center;
+  }
+  h5 {
+    border: solid 3px;
+    border-color: teal;
+    padding: 20px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: "Times New Roman";
+    margin: 40px;
+  }
+  stripes{
+    background: repeating-linear-gradient(to right, teal, teal 10px, rgb(226,206,199) 10px, rgb(226,206,199));
+  }
+  
+  h4 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: "Gill sans";
+  }
+ nav {
+   background-color: #000000;
+    padding: 10px;
+    text-align: center;
+   }
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 10px;
+ }
+.abschnitt {
+background-color: #ff00ff37;
+padding: 20px;
+margin:10px;
+}
+
+p{
+ list-style-type: none;
+ padding: 0;
+ margin-bottom: 5px;
+  font-size: medium;
+  text-align: center;
+ }
+ main{
+  height: 100%;
+  background-position: bottom;
+  background-image: url('lake.jpg');
+  
+ }
+
+ </style>
+
+<body>
+  <header> 
+      <h5><stripes>C <stripes> A</stripes> <stripes> L</stripes> <stripes> C</stripes> <stripes> U</stripes> <stripes> L</stripes> <stripes> A</stripes> <stripes> T</stripes> <stripes> O</stripes> <stripes> R</stripes> </stripes></h5>
+ </header>
+
+
+ <nav>
+<h4>
+    <a href="Text.html">Homepage</a>
+    <a href="Text2.html">Timetable</a>
+    <a href="Text3.html">Basic Knowledge</a>
+</h4>
+</nav>
+<main>
+  <div class="section">
+
+    <h2>Let's calculate!</h2>
+<div>
+    <p>
+      <label for="number1">Number 1:</label>
+     <input type="number" id="number1" placeholder="Enter a number" />
+  </p>
+</div>
+
+
+
+<div>
+  <p>
+ <label for="number2">Number 2:</label>
+ <input type="number" id="number2" placeholder="Enter a number" />
+ </p>
+</div>
+
+ <div>
+<p>
+<label for="number3">Number 3:</label>
+<input type="number" id="number3" placeholder="Enter a number" />
+</p>
+ </div>
+
+
+<div class="operation">
+<p>
+ <label>Operation:</label>
+ <input type="radio" name="operation" value="add" />add
+ <input type="radio" name="operation" value="subtract" />subtract
+ <input type="radio" name="operation" value="multiply" />multiply
+ <input type="radio" name="operation" value="divide" />divide
+</p>
+</div>
+
+ <h1><button id="calculateButton">calculate</button></h1>
+ <p id="result"></p>
+ </div>
+
+ <script src="./index.js"></script>
+
+  <script>
+
+      function calculate() {
+
+var num1 = parseFloat(document.getElementById("number1").value);
+var num2 = parseFloat(document.getElementById("number2").value);
+var num3 = parseFloat(document.getElementById("number3").value);
+var operation = document.querySelector('input[name="operation"]:checked');
+
+if (operation === null) {
+document.getElementById("result").innerHTML = "Please select the operation";
+return;
+
+}
+
+
+
+var result;
+switch (operation.value) {
+case "add":
+result = add(num1, num2, num3);
+break;
+case "subtract":
+result = subtract(num1, num2, num3);
+break;
+case "multiply":
+result = multiply(num1, num2, num3);
+break;
+case "divide":
+result = divide(num1, num2, num3);
+break;
+default:
+result = "Invalid operation";
+}
+
+
+document.getElementById("result").innerHTML = "Result: " + result;
+}
+
+
+
+function add(a, b, c) {
+return a + b + c;
+}
+
+function subtract(a, b, c) {
+return a - b - c;
+}
+
+
+
+function multiply(a, b, c) {
+return a * b * c;
+}
+
+function divide(a, b, c) {
+if (b !== 0 && c !== 0) {
+return a / b / c;
+} else {
+return "Cannot divide by zero";
+}
+}
+
+
+
+document.getElementById("calculateButton").addEventListener("click", calculate);
+
+  </script>
+</main>
+</body>
+
+
+
+</html>
+
+
+
+    

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="de">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+ <title>Graph Databases</title>
+ <link rel="stylesheet" href="./styles.css" />
+<head>
+    <style>
+        body {
+  font-family:'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.left-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+header nav {
+  display: flex;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin: 0 10px;
+}
+h1{
+    padding: 30px;
+    text-align: left;
+    font-size: 30px;
+    color: teal;
+}
+h3{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+h4{
+  text-align: right;
+  font-size: 23px;
+}
+bl{
+  color: #000000;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  flex-grow: 2;
+  background-color: rgb(226, 206, 199);
+  color: rgb(0, 0, 0);
+}
+
+aside {
+  background-color: white;
+  color: rgb(255, 255, 255);
+  width: 20%;
+  padding: 20px;
+  background:linear-gradient(to right, #000000, #000000 70%, teal 30%, teal);
+}
+
+
+section {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  /* text-align: center; */
+  padding: 10px 0;
+}
+
+.abschnitt{
+    background-color: rgb(0, 0, 0);
+    padding: 80px;
+    margin: 30px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+}
+part{
+    margin-bottom: 5px;
+    font-size: medium;
+}
+div{
+    display: flex;
+    gap: 15px;
+    padding: 30px;
+}
+d{
+    border: solid 0px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    font-family: 'Times New Roman';
+    text-align: left;
+  }
+teal{
+    color: teal;
+}
+abschnitt2{
+    padding: 80px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    margin: 30px;
+    display: block;
+}
+    </style>
+
+
+</head>
+<body>
+ <header>
+   <a title="Home page" href="#" class="left-icon"></a>
+   <nav><strong>
+    <a href="Text.html">Homepage</a>
+    <a href="Text1.html">Calculator</a>
+    <a href="Text2.html">Timetable</a> 
+  </strong> </nav>
+ </header>
+
+ <main>
+   <aside>
+     <strong><h2> &NonBreakingSpace;BASIC KNOWLED<bl>GE </bl> <h4> OF ONLINE <bl>MEDIA</bl></h4></h2></strong>
+     <br><h3><i>
+        <nav>
+   <p></p> <a href="Text3.html">&nbsp;Definitions</a></p> 
+     <p><a href="Text4.html">&nbsp;BeReal</a></p>
+   <p><a href="Text5.html">&nbsp;Java</a></p>
+ <p><a href="Text6.html">&nbsp;Graph Databases</a></p></nav></br></h3></i>
+   </aside>
+
+   <section>
+     <h1>Graph databases</h1>
+<div class="abschnitt">
+    <p> <d><i>A graph database is a systematic collection of data that emphasizes the relationship between the diffrent data enteties.</i></d></p>
+<p>--> It is stored without restricting it to a pre-defined model so that there's a more flexible way of using it.</p>
+<p>--> there are 2 popular models of graph databases: <br><strong>Property graphs & RDF graphs</strong></br></p>
+<p>Both of these graph types consist of a collection of points (vertices) and the connection between those points (edges).</p>
+</div>
+<abschnitt2>
+    <p><teal><strong>Property graphs:</strong></teal> Property graphs are used to model relationships among data, and they enable query and data analytics based on these relationships. A property graph has vertices that can contain detailed information about a subject, and edges that denote the relationship between the vertices.</p>
+<p><teal><strong>RDF graphs:</strong></teal>RDF graphs (RDF stands for Rescource Description Framework) are best for representing complex metadata and masterdata. They are often used for linked data, data integration and knowledge graphs. They can represent complex concepts in a domain, or provide rich semantics and inferencing on data. </p>
+</abschnitt2>
+     
+   </section>
+ </main>
+
+ <footer>
+   <center>Julie Flemming LMU</center>
+ </footer>
+
+
+</body>
+
+</html>
